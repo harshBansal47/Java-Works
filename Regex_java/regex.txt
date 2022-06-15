@@ -1,0 +1,48 @@
+Regex : Regex stands for ''regular expression'' is an api in java
+
+Regular expression is a combination of characters which is termed as search pattern is 
+use to search a particular details in a given string ....
+Regex expression use several characters like + , * ,^,{},[],$..etc to manipulate the things ...
+Regex api define string pattern 
+Email validation and passwords are a few areas of strings where Regex is widely used to define the constraints
+
+
+Regular Expressions are provided under java.util.regex package
+It has 3 classes and 1 interface
+             3 Classes are :
+                                   util.regex.pattern
+                                   util.regex.matcher
+                                   PatternSyntaxException
+             1 Interface is :
+                                   MatchResult Interface
+
+1. Pattern class : used to define various types of patterns, providing no public constructors
+This can be created by invoking the compile() method which accepts a regular expression as the first argument
+
+methods:
+1.  compile(String regex) : It is used to compile the given regular expression into a pattern.
+2. compile(String regex, int flags) :
+
+
+. means "any character".
+* means "any number of this".
+.* therefore means an arbitrary string of arbitrary length.
+^ indicates the beginning of the string.
+$ indicates the end of the string.
+\ Backslash, turns off the special meaning of the next character
+\b word boundary
+(?=…) positive look ahead
+(?<=…) positive look behind
+
+
+
+
+regex to match email address
+/[A-Za-z0-9.+]+@[A-Za-z0-9.+]+/.[A-Za-z]{2,4}/
+
+
+
+
+
+
+

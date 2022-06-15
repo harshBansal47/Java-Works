@@ -1,0 +1,122 @@
+Documentation for collection framework
+
+collection - group of individual objects 
+framework - set of classes and interface
+
+collection framework of java contains all the classes and interfaces which are required to design various 
+type of collections with different type of properties and all the methods which are required to operate 
+these collections.
+
+Two root interfaces of collection framework
+  1. collection interface (java.util.collection)
+  2. map interface (java.util.map)
+
+The need of collection framework is to solve out the probelems of using different methods for each type of 
+data structure and to create a common interface for all these  
+
+Advantage of collection framework is it has set of interfaces like collection , list , set , map
+and all the classes like arraylist , hashset , hashmap which implements these interfaces and have common set 
+of methods
+
+Hierarchy : root package java.util 
+   collection interface  implements
+     1 list interface (4 classes arraylist,linkedlist,stack,vector)
+     2 set interface (3 classes hashset,linkedhashset,treeset , 1 interface sorted set which
+                                                                          implements treeset)
+     3 queue interface(2 classes priorityqueue,arraydeque, 1 interface deque which 
+                                                                    implements arraydeque)
+   map interface(4 classes treemap , hashmap , enummap, abstractmap)
+            here treemap class has implementation of 2 interfaces(sortedmap, navigable map)
+
+methods of collection interface 
+1. add()                     add elements to collection
+2. addAll(collection c)      add a collection to a collection
+3. clear()                   remove all items of collection
+4. hashcode()                returns hashcode
+5. toArray()                 returns an array of collection
+6. size()                    returns size
+7. contains(objects o)       check the existence of object in collection
+8. containsAll(Collection c) check existence of collection inside a collection
+9. equals(object o)          compares the object in collection
+10. isEmpty                  returns true if collection is is Empty 
+11. get(index)               get value of collection at particular index in list , set
+12. set(index,object)        set the value at particular index 
+13. retainAll(collection c)  retain only those elements which are present in previous collection
+14. removeAll(collection c)  remove all the values of collection from previous collection
+15. max()                    returns max value in collection
+16. remove(object o)         remove particular object in collection
+17. iterator()               returns an iterator over collection
+18. stream()                 returns sequential stream
+19. parallelStream()         returns parallel stream
+20. splititerator()          use to create a splititerator over collection
+
+Interface that extends collection interface - Iterable interface
+Iterable interface - root interface of collection framework
+          provide functionality of iterator to collections
+          so, it has one abstract method iterator() defined as Iterator iterator();
+
+collection interface - extends iteable interface , implemented by all classes ,contain all basic methods
+
+list interface : for data of list type , ordered collection
+1. arraylist: provide dynamic arrays
+The size  is increased automatically if the collection grows or shrinks
+   declaration    ArrayList<integer>al=new ArrayList<>()
+2.linkedlist : implementation of linkedlist datastructure
+ every element is a separate object with a data part and address part.
+ The elements are linked using pointers and addresses. 
+ Each element is known as a node
+3.vector: same like ArrayList (difference is ArrayList is non synchronized while vector is synchronized)
+4.stack : implements stack datastructure , based on the basic principle of last-in-first-out
+   the class provides three more functions of empty, search and peek 
+
+queue interface : maintains the FIFO(First In First Out) order, the order of the elements matter
+priorityqueue : used when the objects are supposed to be processed based on the priority
+                it has peek() , poll() methods
+Deque interface : double-ended queue , we can add and remove the elements from both ends of the queue
+arraydeque : special kind of resizable-array that grows and allows users to add or remove an element
+       from both sides of the queue   addFirst() , addLast() methods
+
+set interface : set is an unordered collection of objects,avoid the duplication of the objects
+                 perform mathematical operations(intersection,union,difference)
+hashset class : implementation of the hash table data structure,
+ HashSet do not guarantee to be inserted in the same order , objects are inserted based on their hashcode
+linkedhashset : similar to a HashSet,difference is that this uses a doubly linked list to store the data
+     and retains the ordering of the elements 
+Sorted Set Interface :  similar to the set interface, difference is that this interface has extra methods
+    that maintain the ordering of the elements
+treeset :  TreeSet class uses a Tree for storage
+
+Map Interface : supports the key-value pair mapping for the data,perform operations on the basis of the key 
+hashmap : provides the basic implementation of the Map interface of Java
+
+Collection class : Location : java.util.Collection Package
+ It contains methods(polymorphic algorithms) that opearate on collections 
+ It return a new collection backed by a specified collection 
+ It is a member of Java Collections Framework.
+  contains three variables : 
+   1. EMPTY_LIST  : to get immutable EMPTY list 
+   2. EMPTY_SET   : to get immutable Empty set 
+   3. EMPTY_MAP   : to get immutable EMPTY map
+ Methods: 
+   1. boolean addAll(collection c , elements) : it add all the provided elements to the specified 
+      collection at one time
+     ex:-   import java.util.Collections;
+            import java.util.arraylist;
+            import java.util.List;
+            List <String> fruits = new ArrayList<>();
+            Collections.addAll(fruits,"apple","mango","banana");
+
+
+
+
+
+
+
+
+
+/ ****************   Comparator interface    ******************
+It is used to order the objects of user-defined classes by comparing them
+
+
+
+toString method

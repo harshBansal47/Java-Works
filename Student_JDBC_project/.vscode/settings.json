@@ -1,0 +1,11 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\91931\\Downloads\\mysql-connector-java-8.0.11-sources.jar",
+        "c:\\Users\\91931\\Downloads\\mysql-connector-java-8.0.11.jar"
+    ],
+    "java.dependency.packagePresentation": "hierarchical",
+    "java.dependency.syncWithFolderExplorer": true
+}

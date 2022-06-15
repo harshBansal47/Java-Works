@@ -1,0 +1,98 @@
+import javax.annotation.processing.SupportedAnnotationTypes;
+
+#  Annotations are special comments or instrutions which can :
+     #   1. Embed instructions for java compiler
+     #   2. Embed instructions for source code processing tools
+     #   3. Embed meta data which can be read at runtime by java application or third party tools
+
+#  Place where we can apply annotations
+
+@Annotation                                                                                # before class
+public class Annotation{
+    @Annotation int varag = 9;                                                             # before variables
+    @Annotation public void rh(@Annotation int fhg){                                       # Inside method arguments,before methods
+        System.out.println("");
+    }
+    @Annotation public static void main( @Annotation String[] args) {                #before main method and it's arguments
+        
+    }
+
+}
+
+ Built in annotations in java
+@Override
+@Deprecated
+@SuppressWarnings
+
+Built In Java Annotations used in other annotations
+@Target
+@Retention
+@Inherited
+@Documented
+
+@Override
+@Override annotation assures the compiler that the subclass method is overriding the parent class method
+
+class SuperClass {
+    public void fun(){
+
+    }
+}
+class Subclass extends SuperClass{
+    @Override
+    public void fun(){
+
+    }
+}
+
+
+@Deprecated
+@Deprecated annoation marks that this method is deprecated so compiler prints warning
+
+class SuperClass1 {
+    @Deprecated
+    public void fun(){
+
+    }
+}
+class Subclass1 extends SuperClass1{
+    public void fun(){
+
+    }
+}
+
+@SuppressWarnings
+@SuppressWarnings annotation: is used to suppress warnings issued by the compiler.
+  
+Syntax : @SuppressWarnings("unchecked") ,,,,,,,,
+
+Possible Values Inside @SuppressWarnings Annotation Element  are as follows:
+
+All	            It will suppress all warnings.
+Cast            Suppress the warning while casting from a generic type to a nonqualified type or the other way around.
+Deprecation   	Ignores when we’re using a deprecated(no longer important) method or type.
+divzero	        Suppresses division by zero warning.
+empty	        Ignores warning of a statement with an empty body.
+unchecked	    It doesn’t check if the data type is Object or primitive.
+fallthrough	    Ignores fall-through on switch statements usually (if “break” is missing).
+hiding	        It suppresses warnings relative to locals that hide variable
+serial      	It makes the compiler shut up about a missing serialVersionUID.
+finally	        Avoids warnings relative to finally block that doesn’t return.
+unused	        To suppress warnings relative to unused code
+
+class SuperClass2 {
+    @Deprecated
+    public void fun(){
+
+    }
+    @SuppressWarnings("unchecked")
+    public Static void main(String[] args){
+      SuperClass2 sc2  = new SuperClass2();
+      @SuppressWarnings("depricated")
+      sc2.fun();
+    }
+}
+
+
+detailed tutorial of annotations
+https://howtodoinjava.com/java/annotations/complete-java-annotations-tutorial/

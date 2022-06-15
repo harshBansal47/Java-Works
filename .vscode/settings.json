@@ -1,0 +1,7 @@
+{
+    "git.ignoreLimitWarning": true,
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\91931\\Downloads\\mysql-connector-java-8.0.11-sources.jar"
+    ]
+}
