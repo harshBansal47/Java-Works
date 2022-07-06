@@ -48,6 +48,7 @@ public class Collection_problems {
                               
                               ///////////////////////////////////////////////////////////
 //  3. Program for iteration of Hashmap using for-each loop
+
 class traversing {
     public static void main(String[] args) {
         HashMap<Integer,String> fruits = new HashMap<>();

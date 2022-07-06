@@ -1,1 +1,0 @@
-this is readme file of master branch made for git purpose
